@@ -1,6 +1,6 @@
 import { g, auth, config } from '@grafbase/sdk';
 
-//@ts-ignore
+// @ts-ignore
 const User = g
 	.model('User', {
 		name: g.string().length({ min: 2, max: 20 }),
@@ -10,8 +10,6 @@ const User = g
 		githubUrl: g.url().optional(),
 		linkedinUrl: g.url().optional(),
 		projects: g
-			//@ts-ignore
-
 			.relation(() => Project)
 			.list()
 			.optional(),
@@ -48,12 +46,3 @@ export default config({
 		rules: (rules) => rules.private(),
 	},
 });
-
-// Integrate Auth
-// https://grafbase.com/docs/auth
-// auth: {
-//   providers: [authProvider],
-//   rules: (rules) => {
-//     rules.private()
-//   }
-// }
