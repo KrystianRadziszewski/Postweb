@@ -1,5 +1,3 @@
-import React from 'react';
-
 type FormFieldProps = {
 	type?: string;
 	title: string;

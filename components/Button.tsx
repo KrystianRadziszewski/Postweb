@@ -6,7 +6,7 @@ interface ButtonProps {
 	leftIcon?: string | null;
 	rightIcon?: string | null;
 	handleClick?: MouseEventHandler;
-	isSubmitting?: boolean;
+	isSubmitting?: boolean | false;
 	type?: 'button' | 'submit';
 	bgColor?: string;
 	textColor?: string;
